@@ -6,6 +6,8 @@ let formClose = document.querySelector('#form-close');
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 let videoBtn = document.querySelectorAll('.vid-btn');
+let controller = new ScrollMagic.Controller();
+let timeline = new TimelineMax();
 
 window.onscroll = () =>{
     searchBtn.classList.remove('fa-times');
@@ -84,3 +86,57 @@ var swiper = new Swiper(".brand-slider", {
         },
       },
 });
+
+timeline
+  //  .fromTo(".gallery", { opacity: 0 }, { opacity: 1, duration:  2}) 
+  .fromTo(".gallery", { x: 0 }, {x : 100 , duration: 2})
+  .fromTo(".review", { opacity: 0 }, { opacity: 1, duration:  2}) 
+  
+
+
+   let scene = new ScrollMagic.Scene({
+    triggerElement: ".services",
+    duration: "200%",
+    triggerHook: 0,
+  })
+    .setTween(timeline)
+    // .setPin(".services")
+    .addTo(controller);
+
+    timeline
+  //  .fromTo(".gallery", { opacity: 0 }, { opacity: 1, duration:  2}) 
+  // .fromTo(".gallery", { x: 0 }, {x : 100 , duration: 2})
+  .fromTo(".review", { opacity: 0 }, { opacity: 1, duration:  2}) 
+  
+
+
+   let scene2 = new ScrollMagic.Scene({
+    triggerElement: ".gallery",
+    duration: "200%",
+    triggerHook: 0,
+  })
+    .setTween(timeline)
+    // .setPin(".services")
+    .addTo(controller);
+
+  timeline
+  //  .fromTo(".gallery", { opacity: 0 }, { opacity: 1, duration:  2}) 
+  .to(".image", 10, { x : 200 })
+  .to(".form", 10, { y: -200 }, "-=10")
+  
+
+
+   let scene1 = new ScrollMagic.Scene({
+    triggerElement: ".home",
+    duration: "200%",
+    triggerHook: 0,
+  })
+    .setTween(timeline)
+    // .setPin(".services")
+    .addTo(controller);
+
+   
+
+
+
+

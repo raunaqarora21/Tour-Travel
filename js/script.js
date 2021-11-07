@@ -6,8 +6,8 @@ let formClose = document.querySelector('#form-close');
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 let videoBtn = document.querySelectorAll('.vid-btn');
-let controller = new ScrollMagic.Controller();
-let timeline = new TimelineMax();
+// let controller = new ScrollMagic.Controller();
+// let timeline = new TimelineMax();
 
 window.onscroll = () =>{
     searchBtn.classList.remove('fa-times');
@@ -86,57 +86,94 @@ var swiper = new Swiper(".brand-slider", {
         },
       },
 });
+ScrollReveal().reveal('.heading', {
+  reset: true,
+  delay: 400,
+  distance: '100px',
+  origin: 'left',
 
-timeline
-  //  .fromTo(".gallery", { opacity: 0 }, { opacity: 1, duration:  2}) 
-  .fromTo(".gallery", { x: 0 }, {x : 100 , duration: 2})
-  .fromTo(".review", { opacity: 0 }, { opacity: 1, duration:  2}) 
+ 
+ 
+  
+ 
+  // interval: false,
+});
+ScrollReveal().reveal('.book .image', {
+  reset: true,
+  delay: 400,
+  distance: '100px',
+  origin: 'bottom',
+
+ 
+ 
+  
+ 
+  // interval: false,
+});
+ScrollReveal().reveal('.book .form', {
+  reset: true,
+  delay: 400,
+  
+  origin: 'right',
+  distance: '100px', 
+  
+});
+ScrollReveal().reveal('.packages .box', {
+  reset: true,
+  delay: 500,
+  
+  origin: 'right',
+  distance: '100px', 
+  interval: 200
+  
+});
+ScrollReveal().reveal('.services', {
+  reset: true,
+  delay: 500,
+  
+  origin: 'left',
+  distance: '100px', 
+  
+});
+ScrollReveal().reveal('.gallery .box', {
+  reset: true,
+  delay: 500,
+  
+  origin: 'bottom',
+  distance: '100px', 
+  interval: 200
+  
+});
+ScrollReveal().reveal('.review', {
+  reset: true,
+  delay: 700,
+  
+  origin: 'left',
+  distance: '100px', 
+  
+});
+ScrollReveal().reveal('.contact .image', {
+  reset: true,
+  delay: 400,
+  rotate: {
+      x: 90,
+      y: 90,
+      z: 180
+  },
+  duration: 2500,
+  origin: 'left',
+  distance: '100px', 
   
 
+});
 
-   let scene = new ScrollMagic.Scene({
-    triggerElement: ".services",
-    duration: "200%",
-    triggerHook: 0,
-  })
-    .setTween(timeline)
-    // .setPin(".services")
-    .addTo(controller);
-
-    timeline
-  //  .fromTo(".gallery", { opacity: 0 }, { opacity: 1, duration:  2}) 
-  // .fromTo(".gallery", { x: 0 }, {x : 100 , duration: 2})
-  .fromTo(".review", { opacity: 0 }, { opacity: 1, duration:  2}) 
+ScrollReveal().reveal('.contact .form', {
+  reset: true,
+  delay: 500,
+ 
+  
+  origin: 'right',
+  distance: '100px', 
   
 
-
-   let scene2 = new ScrollMagic.Scene({
-    triggerElement: ".gallery",
-    duration: "200%",
-    triggerHook: 0,
-  })
-    .setTween(timeline)
-    // .setPin(".services")
-    .addTo(controller);
-
-  timeline
-  //  .fromTo(".gallery", { opacity: 0 }, { opacity: 1, duration:  2}) 
-  .to(".image", 10, { x : 200 })
-  .to(".form", 10, { y: -200 }, "-=10")
-  
-
-
-   let scene1 = new ScrollMagic.Scene({
-    triggerElement: ".home",
-    duration: "200%",
-    triggerHook: 0,
-  })
-    .setTween(timeline)
-    // .setPin(".services")
-    .addTo(controller);
-
-   
-
-
-
-
+});

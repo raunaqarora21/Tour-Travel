@@ -330,22 +330,25 @@ header .search-bar-container #search-bar{
 
 .packages .box-container{
     display: flex;
+    flex-wrap: wrap-reverse; 
+    align-items: center;     
  
-    flex-wrap: wrap;
+    
     /* padding: 10rem; */
     gap: 4rem;
 }
 .packages .box-container .box{
-    flex: 1 1 30rem;
+    flex: 1 1 20rem;
     border-radius: .5rem;
     overflow: hidden;
-    
+  
     box-shadow: 0 1rem rgba(0, 0, 0, .1);
 }
 
 .packages .box-container .box img{
 
     height: 25rem;
+
     width: 100%;
     object-fit: cover;
 }

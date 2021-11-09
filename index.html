@@ -42,17 +42,31 @@
 
     </header>
     <!-- login form container starts -->
-    <div class="login-form-container">
+    <div class="login-form-container" style="text-transform: capitalize;">
         <i class="fa fa-times" id="form-close"></i>
         <form action="">
             <h3>Login</h3>
-            <input type="email" class="box" placeholder="enter your email">
-            <input type="password" class="box" placeholder="enter your password">
-            <input type="submit" class="btn" value="login now">
+            <input type="email" class="box" placeholder="Enter your email">
+            <input type="password" class="box" placeholder="Enter your password">
+            <input type="submit" class="btn" value="Login now">
             <input type="checkbox" id="remember">
             <label for="remember" > remember me</label>
             <p>forgot password? <a href="#">click here</a></p>
-            <p>don't have an account? <a href="#">regester now</a></p>
+            <p>don't have an account? <a href="#" id="register-btn">Regester now</a></p>
+            
+        </form>
+    </div>
+    <div class="register-form-container">
+        <i class="fa fa-times" id="register-close"></i>
+        <form action="">
+            <h3>Register</h3>
+            <input type="text" class="box" placeholder="Enter your name">
+            <input type="tel" class="box" placeholder="Enter your number">
+            <input type="email" class="box" placeholder="Enter your email">
+            <input type="password" class="box" placeholder="Enter your password">
+            <input type="submit" class="btn" value="Register">
+            
+           
             
         </form>
     </div>
@@ -102,7 +116,7 @@
             <form action="" class="form">
                 <div class="inputBox">
                     <h3>where to</h3>
-                    <input type="text" placeholder="place name">
+                    <input type="text" placeholder="Place name">
                 </div>
                 
                 <div class="inputBox">
@@ -118,7 +132,7 @@
                     <input type="date" placeholder="Departure Date">
                 </div>
 
-                <input type="submit" class="btn" value="book now">
+                <input type="submit" class="btn" value="Book now">
 
             </form>
         </div>
@@ -283,7 +297,7 @@
             <div class="box">
                 <!-- <i class="fa-solid fa-utensils"></i>
                  -->
-                 <i class="fa fa-burger-fries"></i>
+                 <i class="fa fa-female "></i>
                 <h3>food and drinks</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ipsam sequi laborum eius sint id, asperiores corporis quod a accusamus!</p>
             </div>
@@ -293,7 +307,7 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ipsam sequi laborum eius sint id, asperiores corporis quod a accusamus!</p>
             </div>
             <div class="box">
-                <i class="fa fa-globe-asia"></i>
+                <i class="fa fa-globe"></i>
                 <h3>around the world</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ipsam sequi laborum eius sint id, asperiores corporis quod a accusamus!</p>
             </div>
@@ -303,7 +317,7 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ipsam sequi laborum eius sint id, asperiores corporis quod a accusamus!</p>
             </div>
             <div class="box">
-                <i class="fa fa-hiking"></i>
+                <i class="fa fa-child"></i>
                 <h3>Adventures</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ipsam sequi laborum eius sint id, asperiores corporis quod a accusamus!</p>
             </div>
@@ -559,11 +573,18 @@
                 <div class="inputBox">
 
                     <input type="text" placeholder="name">
+                    <!-- <hr style="width: 1px; height: 20px; display: inline-block;"> -->
+                    <!-- <input type="email" placeholder="email"> -->
+                </div>
+                <div class="inputBox">
+
+                    <!-- <input type="text" placeholder="name"> -->
+                    <!-- <hr style="width: 1px; height: 20px; display: inline-block;"> -->
                     <input type="email" placeholder="email">
                 </div>
                 <div class="inputBox">
 
-                    <input type="number" placeholder="number">
+                    <!-- <input type="tel" placeholder="number"> -->
                     <input type="text" placeholder="subject">
                 </div>
 
